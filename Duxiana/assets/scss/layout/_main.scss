@@ -1,0 +1,602 @@
+.main-divider {
+  display: flex;
+  gap: $fontSize12;
+  max-width: $maxWidth;
+  margin: $margin100 auto;
+  @media screen and (min-width: 600px) and (max-width: 767px) {
+    flex-direction: column;
+    margin: 50px 25px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    flex-direction: column;
+    max-width: 90%;
+    margin: 50px 25px;
+  }
+  @media screen and (min-width: 992px) and (max-width: 1200px) {
+    max-width: 90%;
+    margin: 50px auto;
+  }
+  .divider-title {
+    flex: 1;
+    h5 {
+      text-transform: uppercase;
+      margin-bottom: $margin24;
+      font-size: $fontSize16;
+      font-weight: 500;
+      letter-spacing: 1px;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-size: 38px;
+      line-height: 142%;
+      font-weight: 500;
+      letter-spacing: 2px;
+      @media screen and (min-width: 600px) and (max-width: 767px) {
+        br {
+          display: none;
+        }
+        line-height: 112%;
+        letter-spacing: 1px;
+        font-size: 28px;
+      }
+    }
+  }
+  .divider-content {
+    flex: 2;
+    padding: 0 76px;
+    @media screen and (min-width: 600px) and (max-width: 767px),
+      (min-width: 768px) and (max-width: 991px) {
+      padding: 0;
+    }
+    p {
+      font-size: $fontSize18;
+      line-height: 162%;
+      margin-bottom: $margin24;
+      @media screen and (min-width: 600px) and (max-width: 767px) {
+        line-height: 142%;
+      }
+    }
+    .button {
+      a {
+        @include a($textColor1);
+      }
+      .normal {
+        @include normal();
+        border: 1px solid $textColor1;
+        &:hover {
+          @include hoverNormal($textColor1, $textColor2);
+        }
+      }
+      .hover {
+        @include hover($fontSize14);
+        font-weight: 600;
+        &::after {
+          @include hoverAfter(
+            url(/assets/image/link-arrow.svg) 50% 50% no-repeat,
+            $fontSize16 $fontSize16,
+            $fontSize16,
+            $fontSize16
+          );
+        }
+      }
+    }
+  }
+}
+.main-them {
+  .them-content {
+    position: relative;
+    margin-bottom: -4px;
+    .img {
+      img {
+        width: $_100;
+        @media screen and (min-width: 600px) and (max-width: 767px),
+          (min-width: 768px) and (max-width: 991px) {
+          height: 500px;
+          object-fit: cover;
+        }
+      }
+    }
+    .content {
+      position: absolute;
+      top: 8%;
+      display: flex;
+      margin: 68px;
+      @media screen and (min-width: 600px) and (max-width: 767px),
+        (min-width: 768px) and (max-width: 991px) {
+        top: 0;
+        flex-direction: column;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        top: -5%;
+        padding: 6px;;
+      }
+      .content-visible {
+        flex: 1;
+        padding-left: 72px;
+        color: $textColor2;
+        @media screen and (min-width: 600px) and (max-width: 767px),
+          (min-width: 768px) and (max-width: 991px) {
+          padding-left: 0;
+        }
+        @media screen and (min-width: 992px) and (max-width: 1200px) {
+          flex: 2;
+        }
+        h5 {
+          text-transform: uppercase;
+          font-size: $fontSize18;
+          font-weight: 500;
+          letter-spacing: 2px;
+          margin-bottom: $fontSize12;
+        }
+        h1 {
+          text-transform: uppercase;
+          font-size: 42px;
+          font-weight: 500;
+          letter-spacing: 4px;
+          line-height: 128%;
+          margin-bottom: $margin24;
+          @media screen and (min-width: 600px) and (max-width: 767px),
+            (min-width: 768px) and (max-width: 991px),
+            (min-width: 992px) and (max-width: 1200px) {
+            br {
+              display: none;
+            }
+            letter-spacing: 2px;
+            line-height: 112%;
+            margin-bottom: 12px;
+            font-size: 32px;
+          }
+        }
+        p {
+          font-size: $fontSize18;
+          line-height: 152%;
+          margin-bottom: 48px;
+          @media screen and (min-width: 600px) and (max-width: 767px),
+            (min-width: 768px) and (max-width: 991px) {
+            line-height: 122%;
+          }
+        }
+        .button {
+          a {
+            @include a($textColor2);
+          }
+          .normal {
+            @include normal();
+            border: 1px solid $textColor2;
+            &:hover {
+              @include hoverNormal($textColor2, $textColor3);
+            }
+          }
+          .hover {
+            @include hover($fontSize12);
+            margin-left: $fontSize12;
+            &::after {
+              @include hoverAfter(
+                url(/assets/image/link-arrow-white.svg) 50% 50% no-repeat,
+                $fontSize12 $fontSize12,
+                $fontSize14,
+                $fontSize14
+              );
+            }
+          }
+        }
+      }
+      div {
+        flex: 1;
+        @media screen and (max-width: 992px) and (min-width: 1200px) {
+          flex: 0;
+        }
+      }
+    }
+  }
+  .them-image {
+    display: flex;
+    @media screen and (min-width: 600px) and (max-width: 767px),
+      (min-width: 768px) and (max-width: 991px) {
+      flex-direction: column;
+    }
+    .img1 {
+      flex: 1;
+      img {
+        width: $_100;
+      }
+    }
+    .img2 {
+      position: relative;
+      flex: 1;
+      img {
+        width: $_100;
+      }
+      .product {
+        position: absolute;
+        top: 6%;
+        left: 8%;
+        a {
+          text-decoration: none;
+          font-size: $fontSize14;
+          color: $textColor3;
+        }
+        &::before {
+          background: url(/assets/image/products-in-image-icon.svg) 50% 50%
+            no-repeat;
+          background-size: $fontSize16 $fontSize16;
+          content: "";
+          display: inline-block;
+          height: $fontSize16;
+          width: $fontSize16;
+          margin-left: 6px;
+          margin-right: 2px;
+          margin-bottom: -10px;
+          padding: 6px;
+          background-color: $textColor2;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+.main-info {
+  @include mainInfo($margin100 0, $background);
+  @media screen and (min-width: 600px) and (max-width: 767px),
+    (min-width: 768px) and (max-width: 991px) {
+    flex-direction: column-reverse;
+    padding: 0;
+  }
+  .info-content {
+    @include infoContent();
+    @media screen and (min-width: 600px) and (max-width: 767px),
+      (min-width: 768px) and (max-width: 991px) {
+      flex-direction: column;
+      margin: 26px 0;
+      padding-left: 32px;
+    }
+    @media screen and (min-width: 992px) and (max-width: 1200px) {
+      margin: 0;
+      margin-left: 48px;
+    }
+    h1 {
+      @include h1();
+      @media screen and (min-width: 600px) and (max-width: 767px),
+        (min-width: 768px) and (max-width: 991px) {
+        br {
+          display: none;
+        }
+        font-size: 24px;
+        letter-spacing: 1px;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        font-style: 32px;
+      }
+    }
+    p {
+      @include p();
+      @media screen and (min-width: 600px) and (max-width: 767px),
+        (min-width: 768px) and (max-width: 991px) {
+        line-height: 142%;
+      }
+    }
+    .button {
+      a {
+        @include a($textColor1);
+      }
+      .normal {
+        @include normal();
+        border: 1px solid $textColor1;
+        &:hover {
+          @include hoverNormal($textColor1, $textColor2);
+        }
+      }
+    }
+  }
+  .info-img {
+    flex: 1;
+    img {
+      width: $_100;
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        height: 396px;
+      }
+    }
+  }
+}
+.accordion {
+  max-width: $maxWidth;
+  margin: $margin100 auto;
+  @media screen and (min-width: 600px) and (max-width: 767px),
+    (min-width: 768px) and (max-width: 991px) {
+    max-width: 92%;
+    margin: 32px;
+  }
+  .images {
+    display: flex;
+    padding: 32px 0;
+    img {
+      width: $_100;
+      height: $_100;
+      object-fit: cover;
+      border-left: solid 0.5vw;
+      border-right: solid 0.5vw;
+      border-color: $textColor2;
+    }
+    .image-slider {
+      flex: 10%;
+    }
+    .image {
+      flex: $maxWidth;
+    }
+  }
+  .slider-navigate {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: $margin24;
+    margin-top: $margin24;
+    @media screen and (min-width: 600px) and (max-width: 767px),
+      (min-width: 768px) and (max-width: 991px) {
+      margin-top: 0;
+    }
+    li {
+      width: 20%;
+      max-width: 130px;
+      height: 2px;
+      background-color: $textColor1;
+      cursor: pointer;
+      @media screen and (min-width: 600px) and (max-width: 767px),
+        (min-width: 768px) and (max-width: 991px) {
+        width: 12%;
+        max-width: 100px;
+      }
+    }
+  }
+}
+.main-slider {
+  @include mainSlider(#c8c8c7);
+  .header-info {
+    ul {
+      @include ul();
+      @media screen and (min-width: 600px) and (max-width: 767px),
+        (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 18px;
+      }
+      li {
+        @include li();
+        a {
+          @include a($textColor1);
+        }
+      }
+    }
+  }
+  .main-info {
+    @include mainInfo(50px 0, #c8c8c7);
+    @media screen and (min-width: 600px) and (max-width: 767px),
+      (min-width: 768px) and (max-width: 991px) {
+      padding: 50px 0;
+    }
+    .info-content {
+      @include infoContent();
+      @media screen and (min-width: 600px) and (max-width: 767px),
+        (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+        margin: 26px 0;
+        padding-left: 32px;
+      }
+      @media screen and (min-width: 992px) and (max-width: 1200px) {
+        margin: 0;
+        margin-left: 48px;
+      }
+      h5 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: $margin24;
+      }
+      h1 {
+        @include h1();
+        @media screen and (min-width: 600px) and (max-width: 767px),
+          (min-width: 768px) and (max-width: 991px) {
+          br {
+            display: none;
+          }
+          font-size: 24px;
+          letter-spacing: 1px;
+        }
+      }
+      p {
+        @include p();
+      }
+      .button {
+        a {
+          @include a($textColor1);
+        }
+        .normal {
+          @include normal();
+          border: 1px solid $textColor1;
+          &:hover {
+            @include hoverNormal($textColor1, $textColor2);
+          }
+        }
+      }
+    }
+    .info-img {
+      flex: 1;
+      img {
+        width: $_100;
+      }
+    }
+  }
+}
+.main-slider2 {
+  @include mainSlider($background);
+  .header-info {
+    ul {
+      @include ul();
+      @media screen and (min-width: 600px) and (max-width: 767px),
+        (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 18px;
+      }
+      li {
+        @include li();
+        a {
+          @include a($textColor1);
+        }
+      }
+    }
+  }
+  .main-info {
+    @include mainInfo(50px 0, $background);
+  }
+}
+.main-slider3 {
+  @include mainSlider($textColor2);
+  .header-info {
+    ul {
+      @include ul();
+      @media screen and (min-width: 600px) and (max-width: 767px),
+        (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 18px;
+      }
+      li {
+        @include li();
+        a {
+          @include a($textColor1);
+        }
+      }
+    }
+  }
+  .main-info {
+    @include mainInfo(50px 0, $textColor2);
+  }
+}
+.main-box {
+  background-color: $background;
+  padding: 150px 0;
+  @media screen and (min-width: 600px) and (max-width: 767px),
+    (min-width: 768px) and (max-width: 991px),
+    (min-width: 992px) and (max-width: 1200px) {
+    padding: 64px 12px;
+  }
+  a {
+    text-decoration: none;
+    color: $textColor1;
+  }
+  .box {
+    max-width: $maxWidth;
+    margin: 0 auto;
+    @media screen and (min-width: 600px) and (max-width: 767px),
+      (min-width: 768px) and (max-width: 991px),
+      (min-width: 992px) and (max-width: 1200px) {
+      max-width: $_100;
+    }
+    .box-title {
+      text-align: center;
+      margin-bottom: 150px;
+      @media screen and (min-width: 600px) and (max-width: 767px),
+        (min-width: 768px) and (max-width: 991px) {
+        margin-bottom: 32px;
+      }
+      h2 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 26px;
+        letter-spacing: 1px;
+        @media screen and (min-width: 600px) and (max-width: 767px),
+          (min-width: 768px) and (max-width: 991px) {
+          font-style: 20px;
+          margin-bottom: 16px;
+        }
+      }
+      p {
+        letter-spacing: 1px;
+        font-size: $fontSize16;
+        @media screen and (min-width: 600px) and (max-width: 767px),
+          (min-width: 768px) and (max-width: 991px) {
+          font-style: 12px;
+        }
+      }
+    }
+    .box-content {
+      display: flex;
+      gap: 28px;
+      @media screen and (min-width: 600px) and (max-width: 767px),
+        (min-width: 768px) and (max-width: 991px) {
+        gap: 12px;
+      }
+      .box-item {
+        flex: 1;
+        transition: all 0.4s;
+        &:hover {
+          background-color: rgb(218, 194, 240);
+          .button {
+            background-color: $textColor1;
+            color: $textColor2;
+          }
+        }
+        a {
+          display: flex;
+          flex-direction: column;
+          .img {
+            img {
+              display: block;
+              max-width: $_100;
+              object-fit: cover;
+            }
+          }
+          .content {
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            @media screen and (min-width: 600px) and (max-width: 767px),
+              (min-width: 768px) and (max-width: 991px) {
+              padding: 6px;
+            }
+            .heading {
+              h6 {
+                margin-bottom: $fontSize12;
+              }
+              h3 {
+                font-weight: normal;
+                letter-spacing: 2px;
+                margin-bottom: $fontSize12;
+                color: #000;
+                word-break: break-all;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-word;
+              }
+            }
+            .param {
+              margin-top: auto;
+              p {
+                letter-spacing: 2px;
+                font-size: $fontSize14;
+                line-height: 132%;
+                margin-bottom: $margin24;
+                word-break: break-all;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                word-break: break-word;
+              }
+              .button {
+                padding: 8px $fontSize12;
+                font-size: $fontSize12;
+                border: 1px solid $textColor1;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

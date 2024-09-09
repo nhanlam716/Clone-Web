@@ -1,0 +1,87 @@
+@mixin Dflex() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin a($color) {
+  text-decoration: none;
+  color: $color;
+}
+
+@mixin normal() {
+  padding: $fontSize12 $fontSize18;
+  transition: all 0.5s;
+  margin-right: $fontSize12;
+}
+
+@mixin hoverNormal($bgc, $color) {
+  background-color: $bgc;
+  color: $color;
+}
+
+@mixin hover($fs) {
+  text-transform: uppercase;
+  font-size: $fs;
+}
+
+@mixin hoverAfter($bg, $bgs, $h, $w) {
+  background: $bg;
+  background-size: $bgs;
+  content: "";
+  display: inline-block;
+  height: $h;
+  width: $w;
+  margin-left: 6px;
+  margin-right: 6px;
+  margin-bottom: -2px;
+}
+
+@mixin mainSlider($bgc) {
+  padding: 50px 0;
+  background-color: $bgc;
+}
+
+@mixin mainInfo($padding, $bgc) {
+  display: flex;
+  padding: $padding;
+  background-color: $bgc;
+}
+
+@mixin infoContent() {
+  flex: 1;
+  margin: 60px 100px 60px 60px;
+  padding-right: 40px;
+}
+
+@mixin h1() {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 138%;
+  font-size: 40px;
+  margin-bottom: $margin24;
+}
+
+@mixin p() {
+  font-size: $fontSize14;
+  font-weight: bold;
+  line-height: 182%;
+  letter-spacing: 1px;
+  margin-bottom: 48px;
+  padding-right: 126px;
+}
+
+@mixin ul() {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+}
+
+@mixin li() {
+  font-size: $fontSize12;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+}
